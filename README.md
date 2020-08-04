@@ -69,7 +69,7 @@ Things you may want to cover:
 |phone_number|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
-- belongs_to :user
+- belongs_to :item
 
 ## credit_cardテーブル
 |Column|Type|Options|
