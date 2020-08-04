@@ -37,7 +37,6 @@ Things you may want to cover:
 |birth_day|data|null: false|
 
 - has_one :shipping_address
-- has_one :credit_card
 - has_many :items  
 - has_many :comments
 - has_many :favorites
