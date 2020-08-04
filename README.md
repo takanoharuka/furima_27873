@@ -39,6 +39,7 @@ Things you may want to cover:
 - has_many :items  
 - has_many :comments
 - has_many :favorites
+- has_many :buyers
 
 ## itemテーブル
 |Column|Type|Options|
@@ -57,6 +58,7 @@ Things you may want to cover:
 - belongs_to :user
 - has_many :comments
 - has_many :favorites
+- has_many :buyers
 
 ## shipping_addressテーブル
 |Column|Type|Options|
@@ -89,6 +91,15 @@ Things you may want to cover:
 
 - belongs_to :user
 - belongs_to :item
+
+## buyersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+- belongs_to :user
+- belongs_to :item
+
 
 
 
