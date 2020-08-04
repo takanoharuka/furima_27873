@@ -71,17 +71,6 @@ Things you may want to cover:
 
 - belongs_to :item
 
-## credit_cardテーブル
-|Column|Type|Options|
-|------|----|-------|
-|card_number|integer|null: false|
-|expiration_year|integer|null: false|
-|expiration_month|integer|null: false|
-|security_code|integer|null: false|
-|user_id|integer|null: false, foreign_key: true|
-
-- belongs_to :user
-
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
