@@ -66,7 +66,7 @@ Things you may want to cover:
 |city|string|null: false|
 |address|string|null: false|
 |building_name|string|
-|phone_number|integer|null: false|
+|phone_number|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
 - belongs_to :user
