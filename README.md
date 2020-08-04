@@ -44,7 +44,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null: false|
-|product_name|text|null: false|
+|name|text|null: false|
 |information|text|null: false|
 |price|integer|null: false|
 |categories|string|null: false|
