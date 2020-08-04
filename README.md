@@ -74,7 +74,7 @@ Things you may want to cover:
 |address|string|null: false|
 |building_name|string|
 |phone_number|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
 
 - belongs_to :item
 - belongs_to_active_hash :prefecture
