@@ -32,9 +32,7 @@ Things you may want to cover:
 |password|string|null: false|
 |family_name|string|null: false|
 |first_name|string|null: false|
-|birth_year|string|null: false|
-|birth_month|string|null: false|
-|birth_day|string|null: false|
+|birth_day|data|null: false|
 
 - has_one :shipping_address
 - has_one :credit_card
