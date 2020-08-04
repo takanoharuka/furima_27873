@@ -48,23 +48,28 @@ Things you may want to cover:
 |name|text|null: false|
 |information|text|null: false|
 |price|integer|null: false|
-|categories|string|null: false|
-|item_conditions|string|null: false|
-|shipping_charge|string|null: false|
-|shipping_area|string|null: false|
-|delivery_date|string|null: false|
+|category|integer|null: false|
+|item_condition|integer|null: false|
+|shipping_charge|integer|null: false|
+|shipping_area|integer|null: false|
+|delivery_date|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
 - belongs_to :user
 - has_many :comments
 - has_many :favorites
 - has_many :buyers
+- belongs_to_active_hash :category
+- belongs_to_active_hash :item_condition
+- belongs_to_active_hash :shipping_charge
+- belongs_to_active_hash :shipping_area
+- belongs_to_active_hash :delivery_date
 
 ## shipping_addressテーブル
 |Column|Type|Options|
 |------|----|-------|
 |postal_code|string|null: false|
-|prefecture|string|null: false|
+|prefecture|integer|null: false|
 |city|string|null: false|
 |address|string|null: false|
 |building_name|string|
@@ -72,6 +77,7 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 
 - belongs_to :item
+- belongs_to_active_hash :prefecture
 
 ## commentsテーブル
 |Column|Type|Options|
