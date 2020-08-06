@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+@import "reset";
+@import "items/index";
+@import "shared/header";
+@import "shared/footer";
+@import "shared/second_fotter";
+@import "shared/second_header";
+
