@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: :show
+  before_action :set_item, only: [:show, :edit, :update]
 
   def index
     @items = Item.all.order("created_at DESC")
@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(image_params)
+    @item = Item.new(item_params)
     if @item.save
       redirect_to root_path
     else
@@ -21,10 +21,20 @@ class ItemsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
 
   private
 
-  def image_params
+  def item_params
     params.require(:item).permit(:image, :name, :information, :price, :category_id, :item_condition_id, :shipping_charge_id, :shipping_area_id, :delivery_date_id).merge(user_id: current_user.id)
   end
 
