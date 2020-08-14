@@ -69,7 +69,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |postal_code|string|null: false|
-|prefecture|integer|null: false|
+|shipping_area|integer|null: false|
 |city|string|null: false|
 |address|string|null: false|
 |building_name|string|
@@ -77,7 +77,7 @@ Things you may want to cover:
 |item_id|integer|null: false, foreign_key: true|
 
 - belongs_to :item
-- belongs_to_active_hash :prefecture
+- belongs_to_active_hash :shipping_area
 
 ## commentsテーブル
 |Column|Type|Options|

@@ -67,5 +67,6 @@ gem 'pry-rails'
 gem 'active_hash'
 gem 'mini_magick'
 gem 'jquery-rails'
+gem 'payjp'
 
 
