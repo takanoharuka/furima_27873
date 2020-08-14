@@ -15,7 +15,7 @@ class TransactionsController < ApplicationController
     @transaction = Order.new(transactions_params)
     if @transaction.valid?
       pay_item
-      @transaction.save!
+      @transaction.save
       redirect_to root_path
     else
       render 'index'

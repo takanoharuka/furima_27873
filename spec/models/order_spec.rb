@@ -5,7 +5,13 @@ RSpec.describe Order, type: :model do
 
   describe '#create' do
     before do
-      @order = build(:order)
+      buyer = create(:user)
+      seller = create(:user, email: "ddd@gmail.com")
+      item = build(:item, user_id: seller.id)
+      item.image = fixture_file_upload('public/images/test_image.png')
+      item.save
+      @order = build(:order, user_id: buyer.id, item_id: item.id)
+      sleep(1)
     end
 
     it 'すべての値が正しく入力されていれば保存できること' do
